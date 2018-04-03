@@ -28,8 +28,6 @@ public class Main {
             }
         }
 
-
-        //asd
         return array[indexMax];
     }
 
