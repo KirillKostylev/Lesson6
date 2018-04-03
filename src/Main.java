@@ -27,9 +27,6 @@ public class Main {
                 indexMax = i;
             }
         }
-
-
-        //asd
         return array[indexMax];
     }
 
