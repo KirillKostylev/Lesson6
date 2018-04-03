@@ -2,8 +2,9 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        int[] arr = new int[]{6,5,4,3,2,1,1,0,0,0,-7};
+        int[] arr = new int[]{6, 5, 4, 3, 2, 1, 1, 0, 0, 0, -7};
         bubbleSort(arr);
+        System.out.println(getMaxFromArray(arr));
     }
 
     public static void bubbleSort(int[] arr) {
@@ -14,10 +15,19 @@ public class Main {
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
                 }
-                System.out.println(Arrays.toString(arr));
             }
-            System.out.println();
-            System.out.println("Sorted array: " + Arrays.toString(arr));
         }
+        System.out.println("Sorted array: " + Arrays.toString(arr));
     }
+
+    public static int getMaxFromArray(int[] array) {
+        int indexMax = 0;
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > array[indexMax]) {
+                indexMax = i;
+            }
+        }
+        return array[indexMax];
+    }
+
 }
