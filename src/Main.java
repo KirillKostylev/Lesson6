@@ -33,4 +33,14 @@ public class Main {
         return array[indexMax];
     }
 
+    public static int getMinFromArray(int[] array) {
+        int indexMin = 0;
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] < array[indexMin]) {
+                indexMin = i;
+            }
+        }
+        return array[indexMin];
+    }
+
 }
